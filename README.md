@@ -15,7 +15,7 @@ postgresql 数据库使用mybatis-plus
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         PaginationInterceptor page = new PaginationInterceptor();
-        page.setDialectType("postgresql");
+       `page.setDialectType("postgresql");`
         return page;
     }
  ```

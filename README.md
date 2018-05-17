@@ -1,7 +1,7 @@
 # postgresql-spring-boot-mybatis-plus
 postgresql 数据库使用mybatis-plus 
 
-##添加依赖
+## 添加依赖
 
 <!-- mybatis的orm插件 -->
         <dependency>
@@ -38,14 +38,14 @@ postgresql 数据库使用mybatis-plus
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
- ##配置文件
+ ## 配置文件
  
 spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
 spring.datasource.url=jdbc:postgresql://ip:port/db
 spring.datasource.username=username
 spring.datasource.password=password
 spring.datasource.driver-class-name=org.postgresql.Driver
-# 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+#配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
 
 
 #连接池的配置信息
@@ -69,7 +69,7 @@ spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowS
 mybatis-plus.typeAliasesPackage=com.gitee.web.model
 
 
-##注意事项
+### 注意事项
 1. 设置数据源类型时修改 数据库类型
         `// 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();

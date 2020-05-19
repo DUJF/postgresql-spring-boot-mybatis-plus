@@ -1,3 +1,6 @@
+
+![](https://img.shields.io/badge/hippo-V1.1.0-brightgreen)
+
 # postgresql-spring-boot-mybatis-plus
 postgresql 数据库使用mybatis-plus 
 

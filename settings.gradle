@@ -1,0 +1,3 @@
+rootProject.name = 'line'
+include 'pg-mybatis-demo'
+include 'kill'

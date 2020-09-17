@@ -25,6 +25,7 @@ open class OrderServiceImpl(
    * 下单
    * spring 事务中的lock会失效？
    */
+
   override fun createOrder(goodsId: Long, quantity: BigDecimal): Boolean {
     lock.lock()
     try {

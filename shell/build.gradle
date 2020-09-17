@@ -1,6 +1,5 @@
 dependencies {
   compile project(":kill")
-  compile "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
 }
 
 group = "com.athc"

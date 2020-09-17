@@ -1,4 +1,4 @@
-package com.athc.kill.Service
+package com.athc.kill.service
 
 import java.math.BigDecimal
 

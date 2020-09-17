@@ -1,25 +1,18 @@
 package com.athc.kill
 
-import com.athc.kill.Service.OrderService
-import com.athc.kill.config.KillAutoConfig
+import com.athc.kill.service.OrderService
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.junit.jupiter.SpringExtension
 import java.math.BigDecimal
 
-@SpringBootTest(classes = [KillAutoConfig::class], webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ExtendWith(SpringExtension::class)
-class KillApplicationTests(
+open class KillApplicationTests(
     @Autowired
     private val orderService: OrderService
-
-) {
+) : BaseTest() {
 
   @Test
-  fun contextLoads() {
-    orderService.createOrder(1, BigDecimal.ONE)
+  fun test() {
+    orderService.createOrder(2, BigDecimal.ONE)
   }
 
 }

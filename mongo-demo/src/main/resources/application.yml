@@ -1,0 +1,10 @@
+server:
+  port: 8090
+# mongodb数据库配置
+spring:
+  data:
+    mongodb:
+      uri: mongodb://XXX:XXX@XXX:XXX/XXX?authSource=XXX&authMechanism=SCRAM-SHA-1
+  aop:
+    proxy-target-class: true
+debug: false

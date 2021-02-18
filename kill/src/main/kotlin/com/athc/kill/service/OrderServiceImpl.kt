@@ -1,6 +1,7 @@
 package com.athc.kill.service
 
-import com.athc.common.exception.BaseException
+import com.athc.common.constant.ErrorCode
+import com.athc.common.exception.BizException
 import com.athc.common.util.logger
 import com.athc.mybatis.entity.GoodsOrder
 import com.athc.mybatis.mapper.GoodsMapper
@@ -31,7 +32,7 @@ open class OrderServiceImpl(
     try {
       val res = transactionTemplate.execute {
         val goods = goodsMapper.selectById(goodsId)
-            ?: throw BaseException("goods not found", "商品不存在")
+            ?: throw BizException(ErrorCode.FOO_NOT_FOUND, "商品未找到")
         if (null == goods.amount || (goods.amount ?: BigDecimal.ZERO).compareTo(quantity) < 0) {
           logger.warn("库存不足,amount=${goods.amount}")
           return@execute

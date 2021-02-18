@@ -1,5 +1,6 @@
 package com.athc.common.exception
 
+import com.athc.common.constant.ErrorCode
 import java.lang.RuntimeException
 
 /**
@@ -7,8 +8,6 @@ import java.lang.RuntimeException
  * @date 2020/8/25
  * @since JDK1.8
  */
-class BaseException(
-    val errorCode: String = "",
-    override val message: String = "",
-    throwable: Throwable? = null
-) : RuntimeException(message, throwable)
+open class BaseException(
+    open val error: ErrorCode, override val message: String?, override val cause: Throwable?
+) : RuntimeException(message, cause)
